@@ -4,16 +4,37 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Javascript in 100 seconds</title>
      <link rel="stylesheet" href="video.css">
      <!-- CSS only -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+     
 </head>
 <body>
-     <script src="video.js"></script>
      <div class="container-video">
-          <video id="video" ><source src="jsvideo.mp4">Play</video>
-          <button type="button" class="btn btn-success" onclick="playVideo()">Play</button>
+          <video id="videoJs">
+               <source src="jsvideo.mp4">
+          </video>
+               <button class ="play" id="PlayPause" onclick="playVideo()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+               </button>
+          <script>
+               let videoJs = document.getElementById("videoJs");
+               let btn= document.getElementById("PlayPause");
+               
+               function playVideo(){
+                    if(videoJs.paused){
+                         videoJs.play();
+                         btn.style();
+                    }
+                    else{
+                         videoJs.pause();
+                         btn.style("color: green, border: none; background-color: transparent;margin-bottom: 100px");
+                    }
+               }
+               
+          </script>   
      </div>    
 </body>
 </html>
