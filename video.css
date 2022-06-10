@@ -1,6 +1,6 @@
 body{
-     background-color: black;
-     height: 100vh;
+     background-color: black !important;
+     min-height: 100vh;
      margin: 0;
      padding: 0;
 }
@@ -20,7 +20,21 @@ body{
      margin-bottom: 100px;
 }
 
-#video {
+#videoJs {
     width: 75%;
     height: 75%;
+    color: black;
+    
 }
+/* .radius {
+     border-radius: 50%!important;
+} */
+/* .blur {
+     position: absolute;
+     background: #000;
+     color: #fff;
+     padding: 1em;
+     cursor:pointer;
+     z-index: 1000;
+   } */
+

@@ -7,18 +7,22 @@
      <title>Javascript in 100 seconds</title>
      <link rel="stylesheet" href="video.css">
      <!-- CSS only -->
-     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+
      
 </head>
 <body>
      <div class="container-video">
-          <video id="videoJs">
-               <source src="jsvideo.mp4">
-          </video>
+               <video id="videoJs" controls="true">
+                    <source src="jsvideo.mp4">
+               </video>
                <button class ="play" id="PlayPause" onclick="playVideo()">
                     <i class="fa fa-play-circle fa-5x"></i>
                </button>
+               <!-- <button type="button" class="btn btn-danger radius">
+                    Hello
+               </button> -->
           <script>
                let videoJs = document.getElementById("videoJs");
                let btn= document.getElementById("PlayPause");
@@ -26,14 +30,30 @@
                function playVideo(){
                     if(videoJs.paused){
                          videoJs.play();
-                         btn.style();
+                         videoJs.style="filter: none";
+                         btn.innerHTML='<div><i class="fa fa-pause-circle fa-5x"></i></div>';             
                     }
                     else{
                          videoJs.pause();
-                         btn.style("color: green, border: none; background-color: transparent;margin-bottom: 100px");
+                         btn.innerHTML='<div><i class="fa fa-play-circle fa-5x"></i></div>'
                     }
                }
+
+               videoJs.onended= ()=> {
+                    // alert("Video has stopped");
+                    videoJs.style="filter: blur(40px)";
+                    videoJs.innerHTML="Good Luck on the mastery of JS"
+                    
+               };
+               // videoJs.addEventListener('finished',blurVideo());
                
+
+
+               // function blurVideo (){ 
+               //      alert("Video has stopped")
+                    // videoJs.style="filter: blur(40px;)";
+                    // videoJs.innerHTML="Good Luck on the mastery of JS"}
+                
           </script>   
      </div>    
 </body>
