@@ -1,0 +1,20 @@
+{
+  "name": "nfac0608hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "avatar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "save": "git add -A && git commit -m 'update of homework' && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invtr07/S.Nurali--DOM-events-0608.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invtr07/S.Nurali--DOM-events-0608/issues"
+  },
+  "homepage": "https://github.com/invtr07/S.Nurali--DOM-events-0608#readme"
+}
